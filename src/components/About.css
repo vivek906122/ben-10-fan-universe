@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600&display=swap');
+
+/* ── Base ── */
+.about-page {
+    width: 100%;
+    background: #050d0a;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ── Hero Banner ── */
+.about-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 140px 20px 80px;
+    background: linear-gradient(160deg, #021a0e 0%, #000 60%, #021a0e 100%);
+    overflow: hidden;
+}
+
+.about-hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.about-badge {
+    display: inline-block;
+    background: rgba(0, 255, 136, 0.12);
+    border: 1px solid rgba(0, 255, 136, 0.4);
+    color: #00ff88;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+}
+
+.about-hero-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    letter-spacing: 2px;
+}
+
+.about-hero-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-highlight {
+    color: #00ff88;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+/* ── Stats ── */
+.about-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 70px 40px;
+    background: linear-gradient(180deg, #000 0%, #021508 100%);
+}
+
+.stat-card {
+    background: rgba(0, 255, 136, 0.06);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 18px;
+    padding: 36px 48px;
+    text-align: center;
+    min-width: 180px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    border-color: #00ff88;
+    box-shadow: 0 0 24px rgba(0, 255, 136, 0.2);
+}
+
+.stat-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #00ff88;
+    margin-bottom: 6px;
+}
+
+.stat-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ── Story ── */
+.about-story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 90px 60px;
+    background: #000;
+    flex-wrap: wrap;
+}
+
+.about-story-text {
+    max-width: 540px;
+}
+
+.about-story-text h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.about-story-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.68);
+    margin-bottom: 16px;
+}
+
+.about-story-emblem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.about-story-emblem img {
+    width: 220px;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 24px rgba(0, 255, 136, 0.5));
+}
+
+.emblem-ring {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 136, 0.25);
+    animation: spin 12s linear infinite;
+}
+
+.ring-2 {
+    width: 340px;
+    height: 340px;
+    border-color: rgba(0, 255, 136, 0.1);
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Team ── */
+.about-team {
+    padding: 90px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #021508 0%, #000 100%);
+}
+
+.about-team h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    border-radius: 20px;
+    padding: 36px 28px;
+    width: 280px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.team-card:hover {
+    border-color: rgba(0, 255, 136, 0.5);
+}
+
+/* ── Ben Tennyson Signature Card ── */
+.ben-card {
+    background: radial-gradient(ellipse at top, rgba(0, 255, 136, 0.18) 0%, rgba(0, 40, 20, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%),
+                linear-gradient(160deg, #001a0e 0%, #000 80%);
+    border-color: rgba(0, 255, 136, 0.45);
+    box-shadow: 0 0 28px rgba(0, 255, 136, 0.18), inset 0 0 30px rgba(0, 255, 136, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Ben Card: Dynamic Omnitrix Interface Background ── */
+.ben-card .team-img-wrap {
+    border: 3px solid #00ff88;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    background: #021a0e;
+}
+
+/* Ensure Ben breathes */
+.ben-card .team-img-wrap img {
+    animation: benBreath 4s ease-in-out infinite;
+}
+
+
+@keyframes benBoxPulse {
+    0%, 100% { 
+        box-shadow: 0 0 14px rgba(0,255,136,0.4), inset 0 0 8px rgba(0,255,136,0.06);
+        border-color: #00ff88;
+    }
+    50% { 
+        box-shadow: 0 0 32px rgba(0,255,136,0.75), inset 0 0 20px rgba(0,255,136,0.15);
+        border-color: #a3ffda;
+    }
+}
+
+/* Effects Removed */
+
+
+.ben-card .team-img-wrap img {
+    position: relative;
+    z-index: 3;
+    object-fit: contain;
+    padding: 4px;
+    filter: drop-shadow(0 0 18px rgba(0,255,136,1)) saturate(1.1) contrast(1.1);
+    mix-blend-mode: screen;
+    animation: benBreath 4s ease-in-out infinite;
+}
+
+@keyframes benBreath {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 18px rgba(0,255,136,0.8)); }
+    50%       { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(0,255,136,1.2)); }
+}
+
+
+.ben-card::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00ff88, transparent);
+    border-radius: 50%;
+    animation: benGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes benGlow {
+    0%, 100% { opacity: 0.5; transform: scaleX(0.8); }
+    50%       { opacity: 1;   transform: scaleX(1.1); }
+}
+
+.ben-card:hover {
+    border-color: #00ff88;
+    box-shadow: 0 0 48px rgba(0, 255, 136, 0.35), inset 0 0 40px rgba(0, 255, 136, 0.08);
+}
+
+/* ══════════════════════════════════════════
+   Gwen Tennyson – Pink/Purple Mana City
+══════════════════════════════════════════ */
+.gwen-card {
+    background: radial-gradient(ellipse at top, rgba(200,0,255,0.15) 0%, rgba(40,0,60,0.5) 50%, rgba(0,0,0,0.3) 100%),
+                linear-gradient(160deg, #0d0018 0%, #000 80%);
+    border-color: rgba(220, 80, 255, 0.5);
+    box-shadow: 0 0 28px rgba(200,0,255,0.2), inset 0 0 30px rgba(200,0,255,0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Gwen Card: Dynamic Mana-Tech Lab / Scanner Background ── */
+.gwen-card .team-img-wrap {
+    border: 2px solid #dd55ff;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    animation: gwenBoxPulse 3s ease-in-out infinite;
+
+    /* Base Mana Dark Floor/Wall */
+    background-color: #0d0015;
+    background-image:
+        /* Top Mana Beam Glow */
+        radial-gradient(ellipse 70% 50% at 50% -10%, rgba(200,80,255,0.3) 0%, transparent 80%),
+        /* Circular Magic Tech Platform */
+        radial-gradient(ellipse 120% 50% at 50% 110%, rgba(200,80,255,0.2) 0%, transparent 70%),
+        /* Vertical "Mana Field" glows */
+        linear-gradient(90deg, transparent 5%, rgba(220,80,255,0.1) 10%, transparent 15%),
+        linear-gradient(90deg, transparent 85%, rgba(220,80,255,0.1) 90%, transparent 95%),
+        /* Arcane Sigil Grid Floor Pattern */
+        repeating-linear-gradient(45deg, rgba(200,80,255,0.02) 0, rgba(200,80,255,0.02) 1px, transparent 1px, transparent 10px),
+        /* Distant Mana Reactor Lights */
+        radial-gradient(1.5px 1.5px at 15% 45%, #dd55ff 100%, transparent),
+        radial-gradient(1.5px 1.5px at 85% 65%, #dd55ff 100%, transparent),
+        radial-gradient(1.5px 1.5px at 12% 70%, rgba(200,80,255,0.6) 100%, transparent),
+        radial-gradient(1.5px 1.5px at 88% 30%, rgba(200,80,255,0.6) 100%, transparent);
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 20px 20px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+@keyframes gwenBoxPulse {
+    0%, 100% { box-shadow: 0 0 14px rgba(220,80,255,0.4), inset 0 0 8px rgba(220,80,255,0.07); }
+    50%       { box-shadow: 0 0 32px rgba(220,80,255,0.8), inset 0 0 20px rgba(220,80,255,0.18); }
+}
+
+/* Gwen effects removed */
+.gwen-card .team-img-wrap {
+    border: 2px solid #dd55ff;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    background: #0d0015;
+}
+
+
+.gwen-card .team-img-wrap img {
+    position: relative;
+    z-index: 3;
+    object-fit: contain;
+    padding: 4px;
+    filter: drop-shadow(0 0 18px rgba(220,0,255,1)) saturate(1.1) contrast(1.05);
+    mix-blend-mode: normal;
+}
+
+/* Top beam for Gwen's card */
+.gwen-card::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #dd55ff, transparent);
+    border-radius: 50%;
+    animation: gwenGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes gwenGlow {
+    0%, 100% { opacity: 0.5; transform: scaleX(0.8); }
+    50%       { opacity: 1;   transform: scaleX(1.1); }
+}
+
+.gwen-card:hover {
+    border-color: #dd55ff;
+    box-shadow: 0 0 48px rgba(200,0,255,0.4), inset 0 0 40px rgba(200,0,255,0.1);
+}
+
+
+
+.team-img-wrap {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid rgba(0, 255, 136, 0.4);
+    border-radius: 12px;
+    background: rgba(0, 255, 136, 0.03);
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+/* Clean background display */
+
+
+.team-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.4));
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img-wrap img {
+    transform: scale(1.1);
+}
+
+.team-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.team-role {
+    display: inline-block;
+    color: #00ff88;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.team-card p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── Mission ── */
+.about-mission {
+    padding: 90px 40px;
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+
+.mission-box {
+    max-width: 700px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.06), rgba(0, 0, 0, 0));
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 24px;
+    padding: 60px 50px;
+}
+
+.mission-box h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.mission-box p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 36px;
+}
+
+.mission-btn {
+    font-family: 'Orbitron', sans-serif;
+    padding: 14px 36px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 30px;
+    border: 2px solid #00ff88;
+    background: #00ff88;
+    color: #000;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.mission-btn:hover {
+    background: transparent;
+    color: #00ff88;
+}
+
+/* ── Footer ── */
+.about-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #021508;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.footer-credit {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.linkedin-link {
+    color: #0077b5; /* LinkedIn Blue */
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(0, 119, 181, 0.1);
+    transition: all 0.3s ease;
+}
+
+.linkedin-link:hover {
+    background: #0077b5;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 119, 181, 0.5);
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .about-story {
+        gap: 50px;
+        padding: 70px 40px;
+    }
+
+    .about-story-emblem img {
+        width: 180px;
+    }
+
+    .emblem-ring {
+        width: 220px;
+        height: 220px;
+    }
+
+    .ring-2 {
+        width: 270px;
+        height: 270px;
+    }
+
+    .mission-box {
+        padding: 50px 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 130px 24px 70px;
+    }
+
+    .about-stats {
+        gap: 16px;
+        padding: 50px 20px;
+    }
+
+    .stat-card {
+        padding: 28px 32px;
+        min-width: 140px;
+    }
+
+    .stat-card h2 {
+        font-size: 2rem;
+    }
+
+    .about-story {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 60px 24px;
+        gap: 40px;
+    }
+
+    .about-story-text {
+        max-width: 100%;
+    }
+
+    .team-grid {
+        gap: 20px;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .about-team {
+        padding: 60px 20px;
+    }
+
+    .mission-box {
+        padding: 40px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 80%;
+    }
+
+    .mission-box h2 {
+        font-size: 1.5rem;
+    }
+}

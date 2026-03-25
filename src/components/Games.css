@@ -1,0 +1,350 @@
+.simple-games-container {
+    padding: 120px 5% 80px;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.badge {
+    color: #00ff88;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.highlight {
+    color: #00ff88;
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+/* Menu */
+.menu-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-card:hover {
+    background: rgba(0, 255, 136, 0.1);
+    border-color: #00ff88;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.menu-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 15px;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Clicker Game */
+.clicker-game {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    position: relative;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 20px;
+    background: radial-gradient(circle at center, #0a1f0f 0%, #000 100%);
+    overflow: hidden;
+}
+
+.game-hud {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.game-hud span { color: #00ff88; }
+
+.play-area {
+    position: relative;
+    height: calc(100% - 70px);
+}
+
+.villain {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.villain-head {
+    font-size: 4rem;
+    filter: drop-shadow(0 0 10px #ff0000);
+}
+
+.villain-label {
+    background: #ff0000;
+    color: #fff;
+    padding: 2px 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.quit-btn {
+    background: rgba(255,0,0,0.2);
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+/* Simulator */
+.omnitrix-base {
+    margin-top: 50px;
+}
+
+.omnitrix-core {
+    width: 250px;
+    height: 250px;
+    background: #333;
+    border: 10px solid #555;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.core-display {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border: 4px solid #00ff88;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.alien-silhouette {
+    font-size: 4rem;
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
+.alien-name {
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    color: #00ff88;
+}
+
+.core-controls {
+    display: flex;
+    gap: 20px;
+}
+
+.spin-btn, .press-btn {
+    background: #444;
+    border: 1px solid #666;
+    color: #fff;
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.press-btn {
+    background: #00ff88;
+    color: #000;
+    border-color: #00ff88;
+}
+
+.transformed {
+    animation: shaking 0.1s infinite;
+}
+
+@keyframes shaking {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    /* ... add more steps if needed ... */
+}
+
+.transform-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transform-overlay h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+
+/* Results */
+.game-over {
+    padding: 50px;
+    border: 1px solid #00ff88;
+    border-radius: 20px;
+}
+
+.final-score {
+    font-size: 6rem;
+    color: #00ff88;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-main {
+    background: #00ff88;
+    color: #000;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-sub {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Memory Game */
+.memory-game {
+    width: 100%;
+    max-width: 800px;
+    background: #050f08;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 30px;
+    justify-items: center;
+}
+
+.memory-card-item {
+    width: 80px;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 10px;
+}
+
+.memory-card-item.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.card-front {
+    background: #111;
+    color: #00ff88;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card-back {
+    background: #00ff88;
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 600px) {
+    .memory-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 15px;
+    }
+    .memory-card-item {
+        width: 60px;
+        height: 80px;
+    }
+    .card-front, .card-back {
+        font-size: 1.5rem;
+    }
+}
+

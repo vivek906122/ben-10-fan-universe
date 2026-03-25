@@ -1,0 +1,340 @@
+.episodes-section {
+    padding: 120px 5% 80px;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.episodes-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.episodes-badge {
+    text-transform: uppercase;
+    color: #00ff88;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.episodes-header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.episodes-highlight {
+    color: #00ff88;
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+.header-line {
+    width: 60px;
+    height: 3px;
+    background: #00ff88;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.episode-card {
+    background: rgba(10, 15, 12, 0.8);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.episode-card:hover {
+    border-color: #00ff88;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.15);
+}
+
+.episode-thumbnail {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    background: #050505;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ep-frame-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: brightness(0.85);
+    transition: filter 0.3s ease;
+}
+
+.episode-card:hover .ep-frame-image {
+    filter: brightness(1.1);
+}
+
+.thumb-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #0a1f0f 0%, #000 100%);
+}
+
+.glitch-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: rgba(0, 255, 136, 0.3);
+    letter-spacing: 5px;
+}
+
+.scan-line {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 255, 136, 0.1), transparent);
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+.ep-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 255, 136, 0.15);
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.episode-content h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.episode-content p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.watch-btn {
+    background: transparent;
+    border: 1px solid rgba(0, 255, 136, 0.4);
+    color: #00ff88;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.watch-btn:hover {
+    background: #00ff88;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.watch-btn.premium-btn {
+    border-color: #ffcc00;
+    color: #ffcc00;
+}
+
+.watch-btn.premium-btn:hover {
+    background: #ffcc00;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+/* Card Corners decoration */
+.card-corner {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #00ff88;
+    opacity: 0.4;
+}
+
+.card-corner.tr {
+    top: -1px;
+    right: -1px;
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 15px;
+}
+
+.card-corner.bl {
+    bottom: -1px;
+    left: -1px;
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 15px;
+}
+
+/* Payment Modal Styles */
+.payment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(15px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.payment-modal {
+    background: #0a0f0c;
+    border: 2px solid #ffcc00;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(255, 204, 0, 0.15);
+}
+
+.payment-modal h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.payment-modal p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.access-type {
+    color: #ffcc00;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pay-opt {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay-opt:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.confirm-pay-btn {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm-pay-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+}
+
+.cancel-pay-btn {
+    background: transparent;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cancel-pay-btn:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .episodes-header h2 {
+        font-size: 2rem;
+    }
+}

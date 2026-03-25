@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1773398739044,
+    "username": "Vishnu",
+    "email": "vishnu@gmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 1773398811442,
+    "username": "ram",
+    "email": "Vishnu@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": 1773746184922,
+    "username": "kumar",
+    "email": "kumar@gmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 999999999,
+    "username": "SUPERUSER",
+    "email": "super@plumbers.com",
+    "password": "admin"
+  },
+  {
+    "id": 1773815784940,
+    "username": "raj",
+    "email": "raj@gmail.com",
+    "password": "123456"
+  }
+]

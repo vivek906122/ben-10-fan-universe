@@ -1,0 +1,8 @@
+/* Specific styles for Signup if any, otherwise it reuses Login.css */
+.auth-card {
+    max-width: 500px; /* Bit wider for signup */
+}
+
+.auth-form {
+    gap: 16px; /* Slightly tighter gap for more fields */
+}

@@ -1,0 +1,204 @@
+.aliens-page {
+    padding: 120px 5% 80px;
+    min-height: 100vh;
+    background: #020805;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.aliens-hero {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.aliens-hero .badge {
+    color: #00ff88;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.aliens-hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.aliens-hero .highlight {
+    color: #00ff88;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.aliens-hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero-scan-line {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #00ff88;
+    box-shadow: 0 0 15px #00ff88;
+}
+
+/* Grid Layout */
+.aliens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Alien Card */
+.alien-profile-card {
+    background: rgba(0, 255, 136, 0.02);
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: crosshair;
+    overflow: hidden;
+}
+
+.card-bg-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.alien-profile-card:hover {
+    border-color: rgba(0, 255, 136, 0.6);
+    background: rgba(0, 255, 136, 0.05);
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.1);
+}
+
+.alien-profile-card:hover .card-bg-glow {
+    opacity: 1;
+}
+
+.alien-img-container {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.alien-img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.2));
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+.alien-profile-card:hover .alien-img-container img {
+    transform: scale(1.15) translateY(-10px);
+    filter: drop-shadow(0 0 25px rgba(0, 255, 136, 0.5));
+}
+
+.img-overlay {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border: 2px dashed rgba(0, 255, 136, 0.1);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.alien-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.alien-profile-card:hover h3 {
+    color: #00ff88;
+}
+
+.power-label {
+    font-size: 0.75rem;
+    color: #00ff88;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.alien-info p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.dna-sequence {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(0, 255, 136, 0.3);
+    letter-spacing: 2px;
+    border-top: 1px solid rgba(0, 255, 136, 0.1);
+    padding-top: 15px;
+}
+
+/* Card Borders */
+.card-border-top, .card-border-bottom {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #00ff88;
+    transition: width 0.4s;
+}
+
+.card-border-top {
+    top: 0;
+    left: 10%;
+}
+
+.card-border-bottom {
+    bottom: 0;
+    right: 10%;
+}
+
+.alien-profile-card:hover .card-border-top,
+.alien-profile-card:hover .card-border-bottom {
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .aliens-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .aliens-grid {
+        gap: 20px;
+    }
+}
